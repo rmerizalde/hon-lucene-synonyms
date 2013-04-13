@@ -462,9 +462,6 @@ class SynonymExpandingExtendedDismaxQParser extends ExtendedDismaxQParser {
                             // make a defensive clone for future usage
                             originalAlternateQuery = (AlternateQuery) currentAlternateQuery.clone();
                         }
-                    } else if (k == textsInQuery.size() - 1) {
-                        // we're sure we're the last one to use it, so we can just use the original clone
-                        currentAlternateQuery = originalAlternateQuery;
                     } else {
                         // need to clone to a new object
                         currentAlternateQuery = (AlternateQuery) originalAlternateQuery.clone();
